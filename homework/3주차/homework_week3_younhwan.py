@@ -15,7 +15,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 songs = soup.select('#body-content > div.newest-list > div > table > tbody > tr')
 
 for song in songs:
-    # Class 따올 시 공백을 두면 인식이 안되는 듯 하다. '.'으로 처리하여 해결(다른분들 과제 참고)
+    # ★Class 따올 시 공백을 두면 인식이 안되는 듯 하다. '.'으로 처리하여 해결(다른분들 과제 참고)★
     a_tag = song.select_one('td.info > a.title.ellipsis')
     if a_tag is not None:
         rank = song.select_one('td.number').text[:2].strip()               # td 중 Class=number의 test 불러옴
