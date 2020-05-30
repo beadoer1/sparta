@@ -23,3 +23,13 @@ for movie in movies:
     if a_tag is not None:
         # a의 text를 찍어본다.
         print (c_tag ['alt'], a_tag.text, b_tag.text)
+
+# # sparta 완성문
+# for movie in movies:
+#     # movie 안에 a 가 있으면,
+#     a_tag = movie.select_one('td.title > div > a')
+#     if a_tag is not None:
+#         rank = movie.select_one('td:nth-child(1) > img')['alt'] # img 태그의 alt 속성값을 가져오기
+#         title = a_tag.text                                      # a 태그 사이의 텍스트를 가져오기
+#         star = movie.select_one('td.point').text                # td 태그 사이의 텍스트를 가져오기
+#         print(rank,title,star)

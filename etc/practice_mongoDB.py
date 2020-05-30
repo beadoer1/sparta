@@ -13,10 +13,10 @@ data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&d
 soup = BeautifulSoup(data.text, 'html.parser')
 
 # select를 이용해서, tr들을 불러오기
-movies = soup.select('#old_content > table > tbody > tr')
+movied = soup.select('#old_content > table > tbody > tr')
 
 # movies (tr들) 의 반복문을 돌리기
-for movie in movies:
+for movie in movied:
     # movie 안에 a 가 있으면,
     a_tag = movie.select_one('td.title > div > a')
     if a_tag is not None:
@@ -29,4 +29,4 @@ for movie in movies:
             'title' : title,
             'star' : star
         }
-        db.movies.insert_one(doc) # movies에 넣었다!
+        db.movied.insert_one(doc) # movies에 넣었다!
