@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 30px auto;
+            width: 800px;
+            padding-top: 40px;
+            border-style: ridge;
+        }
+
+        .img1 {
+            margin: auto;
+            width: 600px;
+            height: 600px;
+            border-style: double;
+        }
+
+        .text {
+            margin: 16px 40px 16px 40px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .text input {
+            margin-left: 100px;
+        }
+
+        .text label {
+            position: absolute;
+            margin: 4px;
+        }
+
+        .text button {
+            margin: 30px;
+            /* margin-left: 29%; */
+        }
+
+        .in {
+            width: 300px;
+            height: 20px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            border-radius: 10px;
+            padding: 8px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: medium;
+        }
+
+        .button {
+            width: 300px;
+            height: 50px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: skyblue;
+            border-radius: 10px;
+            padding: 8px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: medium;
+        }
+    </style>
+    <script>
+        function order() {
+            alert('주문이 완료 되었습니다.');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="img1">
+        <img src="https://gdimg.gmarket.co.kr/607288269/still/600?ver=1586766563" />
+    </div>
+    <div class="text">
+
+        <h1>초경량 족자 스크린 <span style="font-size:medium"> 가격: 57,000원/개</span></h1>
+
+        <p style="font-weight:lighter;">
+            간단하고, 경고하며, 가벼운 '초경량 족자 스크린'.
+            언제 어디서든 1분이면 당신이 있는 곳을 영화관으로 만들어 드립니다.
+        </p>
+
+        <h1>주문하기</h1>
+        <p>
+            <label style="font-weight: lighter;">주문자 성함:</label> <input class="in" , type="text" />
+        </p>
+        <P>
+            <label style="font-weight: lighter;">수량:</label> <input class="in" placeholder="  --수량을 선택하세요--"
+                type="number" />
+        </P>
+        <p>
+            <label style="font-weight: lighter;">주소:</label> <input class="in" , type="address" />
+        </p>
+        <p>
+            <label style="font-weight: lighter;">전화번호:</label> <input class="in" , type="phone" />
+        </p>
+        <center>
+            <button onclick="order()" class="button">주문하기</button>
+        </center>
+    </div>
+</body>
+
+</html>
