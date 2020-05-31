@@ -12,7 +12,7 @@ data = requests.get('https://www.genie.co.kr/chart/top200?ditc=D&ymd=20200403&hh
 # HTML.parser 의 의미하는 바는 뭘까요
 soup = BeautifulSoup(data.text, 'html.parser')
 
-songs = soup.select('#body-content > div.newest-list > div > table > tbody > tr')
+songs = soup.select('#body-content > div.newest-list > div > table > tbody > tr') # ★ Copy > Copy selector 를 통해 따올 것!!! ★ 
 
 for song in songs:
     # ★Class 따올 시 공백을 두면 인식이 안되는 듯 하다. '.'으로 처리하여 해결(다른분들 과제 참고)★
